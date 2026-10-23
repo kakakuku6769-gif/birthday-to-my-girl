@@ -28,7 +28,7 @@ h1,h2,h3,p{margin-top:0}h1,h2,.serif{font-family:var(--serif);font-weight:500;le
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.photo-tile{border:1px dashed #ffb2cc66;border-radius:22px;min-height:210px;overflow:hidden;position:relative;background:linear-gradient(145deg,#522a4a,#24152e);display:grid;place-items:center;text-align:center;transition:.3s}.photo-tile:hover{transform:translateY(-5px);border-style:solid}.photo-tile input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;z-index:2}.photo-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.photo-caption{position:absolute;bottom:0;left:0;right:0;padding:30px 12px 13px;background:linear-gradient(transparent,#100a16e8);font-size:.82rem;z-index:1}.photo-placeholder{padding:20px;color:#f5cbd9}.photo-placeholder b{display:block;font-size:2rem;margin-bottom:8px}.photo-tile.has-image .photo-placeholder{display:none}
 .letter-wrap{max-width:800px;margin:auto;padding:clamp(25px,6vw,58px);position:relative;background:linear-gradient(135deg,#fff1dc,#f3cfd5);color:#422438;border-radius:8px 28px 8px 28px;box-shadow:0 30px 90px #0005;transform:rotate(-.4deg)}.letter-wrap:before{content:"";position:absolute;inset:12px;border:1px solid #a36a7b66;pointer-events:none}.letter-wrap .eyebrow{color:#9d506d}.letter-wrap p{font-family:var(--serif);font-size:1.08rem;line-height:1.95}.letter-wrap .signature{font:italic 2rem var(--serif);text-align:right;color:#a04469;margin-top:24px}
 .wish-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.wish-card{padding:24px;min-height:180px;position:relative;overflow:hidden}.wish-card:after{content:"✦";position:absolute;right:17px;bottom:-22px;font-size:6rem;color:#ff7caa0d}.wish-card p{color:var(--muted);line-height:1.7}.wish-card .wish-symbol{font-size:1.6rem}
-.guestbook{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;align-items:start}.form-card{padding:28px}.field{display:grid;gap:8px;margin:14px 0}.field label{font-size:.78rem;color:#e7d0e4;font-weight:700}.field input,.field textarea,.field select{width:100%;padding:13px 15px;background:#100a16aa;border:1px solid #ffffff20;border-radius:13px;color:var(--cream);resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#8d7892}.note-list{display:grid;gap:12px}.note-card{padding:20px 22px;border-radius:18px;border:1px solid #ffffff18;background:linear-gradient(120deg,#ffffff0a,#ffffff03);animation:pageIn .35s ease}.note-card-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:10px}.note-card strong{color:#ffe0e9}.note-card time{font-size:.7rem;color:#9e86a3}.note-card p{color:var(--muted);line-height:1.65;margin-bottom:0;white-space:pre-wrap;overflow-wrap:anywhere}.empty-state{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:18px}
+.field{display:grid;gap:8px;margin:14px 0}.field label{font-size:.78rem;color:#e7d0e4;font-weight:700}.field input,.field textarea,.field select{width:100%;padding:13px 15px;background:#100a16aa;border:1px solid #ffffff20;border-radius:13px;color:var(--cream);resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#8d7892}
 .countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:700px;margin:30px auto}.count-box{padding:24px 10px;text-align:center;border-radius:20px;border:1px solid #f8d89a30;background:linear-gradient(145deg,#ffffff0c,#ffffff03)}.count-box strong{display:block;font:clamp(2rem,5vw,3.2rem) var(--serif);color:var(--gold)}.count-box span{font-size:.7rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
 .quiz-card{max-width:680px;margin:auto;padding:clamp(25px,5vw,42px)}.quiz-question{font:1.55rem var(--serif);margin:18px 0}.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quiz-option{padding:14px;border-radius:14px;background:#ffffff08;border:1px solid var(--line);color:var(--cream);text-align:left}.quiz-option:hover{border-color:var(--rose);background:#ff7caa12}.quiz-feedback{min-height:28px;margin-top:16px;color:var(--gold);font-size:.9rem}
 .surprise-box{padding:clamp(32px,7vw,70px);text-align:center;overflow:hidden;position:relative}.surprise-box .surprise-icon{font-size:4rem;display:block;animation:float 3s ease-in-out infinite}.surprise-message{display:none;max-width:600px;margin:24px auto 0;color:var(--muted);line-height:1.9}.surprise-message.show{display:block;animation:pageIn .5s ease}
@@ -66,16 +66,17 @@ footer{border-top:1px solid var(--line);padding:25px 18px;text-align:center;colo
 .page.active .photo-tile:nth-child(n+5),
 .page.active .wish-card:nth-child(n+5) { animation-delay: .24s; }
 @keyframes contentRise { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:translateY(0); } }
-@media(prefers-reduced-motion:reduce){.page.active .section-head,.page.active .hero-grid > div,.page.active .feature-card,.page.active .photo-tile,.page.active .timeline-item,.page.active .letter-wrap,.page.active .wish-card,.page.active .quiz-card,.page.active .form-card,.page.active .note-card,.page.active .count-box,.page.active .surprise-box{animation:none!important}}
+@media(prefers-reduced-motion:reduce){.page.active .section-head,.page.active .hero-grid > div,.page.active .feature-card,.page.active .photo-tile,.page.active .timeline-item,.page.active .letter-wrap,.page.active .wish-card,.page.active .quiz-card,.page.active .count-box,.page.active .surprise-box{animation:none!important}}
 
 .toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#fff1dc;color:#381c2d;padding:13px 18px;border-radius:999px;font-size:.84rem;font-weight:800;box-shadow:0 15px 50px #0006;z-index:200;transition:.3s}.toast.show{opacity:1;transform:translate(-50%,0)}
 .confetti{position:fixed;top:-20px;width:9px;height:15px;z-index:150;pointer-events:none;animation:confettiFall var(--dur,3s) linear forwards;transform:rotate(var(--rot,0deg))}@keyframes confettiFall{to{transform:translate3d(var(--drift,0px),110vh,0) rotate(800deg);opacity:.7}}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.hidden{display:none!important}
 .bottom-nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:45;display:flex;align-items:center;gap:5px;padding:7px;background:linear-gradient(145deg,#25172beF,#130d1bed);border:1px solid #f8d89a35;border-radius:22px;box-shadow:0 16px 48px #0008,0 1px 0 #ffffff12 inset;max-width:calc(100vw - 20px);overflow-x:auto;backdrop-filter:blur(22px);scrollbar-width:none}.bottom-nav::-webkit-scrollbar{display:none}.bottom-nav button{border:1px solid transparent;background:transparent;color:#c5b3ca;padding:10px 13px;border-radius:15px;font-size:.76rem;font-weight:700;white-space:nowrap;transition:background .25s,border-color .25s,color .25s,transform .25s}.bottom-nav button.active{background:linear-gradient(135deg,#ff7caa24,#f8d89a12);border-color:#ff7caa3d;color:#fff0e7;box-shadow:0 5px 18px #0002}.bottom-nav button:hover{background:#ffffff0c;color:#fff4f6;transform:translateY(-1px)}.bottom-spacer{height:105px}
-@media(max-width:800px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero-grid .eyebrow{justify-content:center}.hero-grid .lead{margin-inline:auto}.hero-grid .btn-row{justify-content:center}.hero-art{min-height:390px;order:-1}.feature-grid,.wish-grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.guestbook{grid-template-columns:1fr}.stats{max-width:520px;margin-inline:auto}.bottom-nav button{padding:10px 11px}.topbar{padding:11px 14px}.music-label{display:none}}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero-grid .eyebrow{justify-content:center}.hero-grid .lead{margin-inline:auto}.hero-grid .btn-row{justify-content:center}.hero-art{min-height:390px;order:-1}.feature-grid,.wish-grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.stats{max-width:520px;margin-inline:auto}.bottom-nav button{padding:10px 11px}.topbar{padding:11px 14px}.music-label{display:none}}
 @media(max-width:500px){.feature-grid,.wish-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.photo-tile{min-height:165px}.hero-art{min-height:340px}.portrait-card{height:330px;width:270px}.orbit{width:300px;height:300px}.tag-one{left:-4px;top:30px}.tag-two{right:-4px;bottom:24px}.stats{gap:7px}.stat{padding:13px 7px}.stat strong{font-size:1.6rem}.countdown-grid{gap:7px}.count-box{padding:17px 4px}.count-box span{font-size:.6rem}.top-actions .nav-btn{display:none}.bottom-nav{bottom:8px}.bottom-nav button{font-size:.7rem;padding:9px 10px}.intro-title{font-size:clamp(3rem,14vw,5rem)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 </style>
+<style>.zara-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;border-radius:inherit}.zara-photo.loaded{display:block}.portrait-card:has(.zara-photo.loaded) .portrait-center{display:none}.photo-tile img{z-index:0}</style>
 </head>
 <body>
 <div id="app">
@@ -115,7 +116,7 @@ footer{border-top:1px solid var(--line);padding:25px 18px;text-align:center;colo
    <div class="btn-row"><button class="btn btn-primary" data-go="letter">Read your letter ✉</button><button class="btn btn-ghost" data-go="memories">Open the memory gallery ↗</button></div>
    <div class="stats"><div class="stat"><strong>∞</strong><span>Reasons to smile</span></div><div class="stat"><strong>01</strong><span>Very special person</span></div><div class="stat"><strong>✨</strong><span>Unlimited wishes</span></div></div>
   </div>
-  <div class="hero-art"><div class="orbit"></div><div class="portrait-card"><div class="portrait-center"><div><div class="monogram">Z</div><span>Shine in your own way</span></div></div></div><div class="float-tag tag-one">✦ Birthday Queen</div><div class="float-tag tag-two">♡ Keep glowing</div></div>
+  <div class="hero-art"><div class="orbit"></div><div class="portrait-card"><img class="zara-photo" src="Zara.png" alt="Zara" onload="this.classList.add('loaded')" onerror="this.remove()"><div class="portrait-center"><div><div class="monogram">Z</div><span>Shine in your own way</span></div></div></div><div class="float-tag tag-one">✦ Birthday Queen</div><div class="float-tag tag-two">♡ Keep glowing</div></div>
  </div>
  <div class="wrap screen-pad" style="padding-top:0"><div class="section-head reveal"><span class="eyebrow">A small birthday universe</span><h2>Choose your <span class="gradient-text">next little adventure.</span></h2><p>Every corner has a different feeling. Take your time and explore them all.</p></div>
  <div class="feature-grid">
@@ -129,18 +130,18 @@ footer{border-top:1px solid var(--line);padding:25px 18px;text-align:center;colo
 
 <section class="page" id="memories">
  <div class="wrap screen-pad">
-  <div class="section-head"><span class="eyebrow">Little moments, forever</span><h2>Memory <span class="gradient-text">Lane.</span></h2><p>Make this page yours. Tap any frame to add a photo from your device; the images stay in this browser session and are not uploaded.</p></div>
+  <div class="section-head"><span class="eyebrow">Little moments, forever</span><h2>Memory <span class="gradient-text">Lane.</span></h2><p>Drop Zara.png, memory1.png–memory5.png, memory6.jpg, memory7.png, and memory8.png beside this HTML file. They will load automatically.</p></div>
   <div class="gallery">
-   <label class="photo-tile"><input type="file" accept="image/*" aria-label="Add a memory photo"><div class="photo-placeholder"><b>＋</b>Add a favourite photo</div><div class="photo-caption">The little things ✦</div></label>
-   <label class="photo-tile"><input type="file" accept="image/*" aria-label="Add another memory photo"><div class="photo-placeholder"><b>♡</b>A moment to remember</div><div class="photo-caption">A smile worth saving</div></label>
-   <label class="photo-tile"><input type="file" accept="image/*" aria-label="Add a third memory photo"><div class="photo-placeholder"><b>✧</b>Something special</div><div class="photo-caption">A little piece of joy</div></label>
-   <label class="photo-tile"><input type="file" accept="image/*" aria-label="Add a fourth memory photo"><div class="photo-placeholder"><b>✿</b>One more memory</div><div class="photo-caption">Keep this close</div></label>
-   <label class="photo-tile"><input type="file" accept="image/*" aria-label="Add a fifth memory photo"><div class="photo-placeholder"><b>☼</b>Golden hour</div><div class="photo-caption">A bright kind of day</div></label>
-   <label class="photo-tile"><input type="file" accept="image/*" aria-label="Add a sixth memory photo"><div class="photo-placeholder"><b>☾</b>Quiet moments</div><div class="photo-caption">Soft memories</div></label>
-   <label class="photo-tile"><input type="file" accept="image/*" aria-label="Add a seventh memory photo"><div class="photo-placeholder"><b>✦</b>Our favourite</div><div class="photo-caption">This one matters</div></label>
-   <label class="photo-tile"><input type="file" accept="image/*" aria-label="Add an eighth memory photo"><div class="photo-placeholder"><b>∞</b>More to come</div><div class="photo-caption">The story continues</div></label>
+   <div class="photo-tile"><img src="memory1.png" alt="The little things ✦" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="photo-placeholder"><b>＋</b>Add a favourite photo</div><div class="photo-caption">The little things ✦</div></div>
+   <div class="photo-tile"><img src="memory2.png" alt="A smile worth saving" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="photo-placeholder"><b>♡</b>A moment to remember</div><div class="photo-caption">A smile worth saving</div></div>
+   <div class="photo-tile"><img src="memory3.png" alt="A little piece of joy" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="photo-placeholder"><b>✧</b>Something special</div><div class="photo-caption">A little piece of joy</div></div>
+   <div class="photo-tile"><img src="memory4.png" alt="Keep this close" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="photo-placeholder"><b>✿</b>One more memory</div><div class="photo-caption">Keep this close</div></div>
+   <div class="photo-tile"><img src="memory5.png" alt="A bright kind of day" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="photo-placeholder"><b>☼</b>Golden hour</div><div class="photo-caption">A bright kind of day</div></div>
+   <div class="photo-tile"><img src="memory6.jpg" alt="Soft memories" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="photo-placeholder"><b>☾</b>Quiet moments</div><div class="photo-caption">Soft memories</div></div>
+   <div class="photo-tile"><img src="memory7.png" alt="This one matters" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="photo-placeholder"><b>✦</b>Our favourite</div><div class="photo-caption">This one matters</div></div>
+   <div class="photo-tile"><img src="memory8.png" alt="The story continues" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><div class="photo-placeholder"><b>∞</b>More to come</div><div class="photo-caption">The story continues</div></div>
   </div>
-  <div class="panel" style="padding:22px;margin-top:18px"><strong>Photo tip:</strong> <span class="muted small">For a shareable website, add the photos to the project before publishing. This demo uses local previews so your photos aren't sent anywhere.</span></div>
+  <div class="panel" style="padding:22px;margin-top:18px"><strong>Photo tip:</strong> <span class="muted small">Keep all images in the same folder as this HTML file. Use the exact filenames shown in the folder guide.</span></div>
   <div class="btn-row"><button class="btn btn-ghost" data-go="home">← Back to home</button><button class="btn btn-primary" data-go="letter">Continue to the letter →</button></div>
  </div>
 </section>
@@ -237,15 +238,59 @@ function confetti(n=70){const colors=['#ff7caa','#f8d89a','#fff2e7','#c8a6ff','#
 const canvas=$('#stars'),ctx=canvas.getContext('2d');let stars=[];
 function resizeStars(){canvas.width=innerWidth*devicePixelRatio;canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);stars=Array.from({length:Math.min(150,Math.floor(innerWidth/7))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.4+.25,a:Math.random()*.7+.15,s:Math.random()*.012+.003}));}
 function drawStars(){ctx.clearRect(0,0,innerWidth,innerHeight);stars.forEach(s=>{s.a+=s.s;if(s.a>.95||s.a<.12)s.s*=-1;ctx.globalAlpha=s.a;ctx.fillStyle='#ffe9f2';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill();});ctx.globalAlpha=1;requestAnimationFrame(drawStars);}addEventListener('resize',resizeStars);resizeStars();drawStars();
-/* Music: a gentle synthesized chime loop, starts only after a user action */
-let audioCtx=null,musicTimer=null,musicOn=false,noteStep=0;
-const melody=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46,523.25,659.25,783.99,1046.5,880,783.99,659.25,587.33];
-function playNote(freq,when,duration=.42){if(!audioCtx)return;const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.setValueAtTime(freq,when);gain.gain.setValueAtTime(.0001,when);gain.gain.exponentialRampToValueAtTime(.055,when+.035);gain.gain.exponentialRampToValueAtTime(.0001,when+duration);osc.connect(gain);gain.connect(audioCtx.destination);osc.start(when);osc.stop(when+duration+.03);}
-function musicLoop(){if(!musicOn||!audioCtx)return;playNote(melody[noteStep%melody.length],audioCtx.currentTime,.48);if(noteStep%4===0)playNote(melody[noteStep%melody.length]/2,audioCtx.currentTime,.65);noteStep++;musicTimer=setTimeout(musicLoop,430);}
-function toggleMusic(){if(!musicOn){try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();audioCtx.resume();musicOn=true;$('#musicToggle').innerHTML='♫ <span class="music-label">Music: On</span>';musicLoop();toast('Birthday melody is playing ♫');}catch(e){toast('Music is not supported in this browser.');}}else{musicOn=false;clearTimeout(musicTimer);$('#musicToggle').innerHTML='♫ <span class="music-label">Music: Off</span>';toast('Music paused');}}
-$('#musicToggle').addEventListener('click',toggleMusic);
-/* Photo gallery local previews */
-$$('.photo-tile input').forEach(input=>input.addEventListener('change',e=>{const file=e.target.files&&e.target.files[0];if(!file)return;if(!file.type.startsWith('image/')){toast('Please choose an image file.');return;}const tile=input.closest('.photo-tile');let img=tile.querySelector('img');if(!img){img=document.createElement('img');tile.appendChild(img);}const reader=new FileReader();reader.onload=ev=>{img.src=ev.target.result;tile.classList.add('has-image');};reader.readAsDataURL(file);}));
+/* Smart playlist: music.mp3 + optional music2.mp3 ... music5.mp3 beside index.html.
+   Available tracks are shuffled and played once each per round; the next round is reshuffled. */
+const musicCandidates=['music.mp3','music2.mp3','music3.mp3','music4.mp3','music5.mp3'];
+const birthdayMusic=new Audio(); birthdayMusic.preload='auto';
+let availableMusic=[], remainingMusic=[], currentTrack='', lastTrack='', musicOn=false, musicStarted=false, trackFailureHandled=false;
+const musicButton=$('#musicToggle');
+function updateMusicButton(){musicButton.innerHTML=`♫ <span class="music-label">Music: ${musicOn?'On':'Off'}</span>`;musicButton.setAttribute('aria-label',musicOn?'Pause birthday music':'Play birthday music');}
+function shuffleTracks(list){const out=[...list];for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]];}return out;}
+function findAvailableMusic(){
+ // Try the expected filenames directly instead of relying on HEAD requests,
+ // which can fail on some static hosts even when the audio URL itself works.
+ availableMusic=[...musicCandidates];
+ remainingMusic=[];
+ if(availableMusic.length) tryAutoMusic();
+}
+function playNextTrack(){
+ if(!musicOn||!availableMusic.length)return;
+ if(!remainingMusic.length){remainingMusic=shuffleTracks(availableMusic);if(remainingMusic.length>1&&remainingMusic[0]===lastTrack){[remainingMusic[0],remainingMusic[1]]=[remainingMusic[1],remainingMusic[0]];}}
+ currentTrack=remainingMusic.shift();trackFailureHandled=false;birthdayMusic.src=currentTrack;birthdayMusic.load();
+ const attempt=birthdayMusic.play();
+ if(attempt&&typeof attempt.catch==='function')attempt.catch(()=>{
+   if(!musicStarted){musicOn=false;updateMusicButton();return;}
+   handleTrackFailure();
+ });
+}
+function handleTrackFailure(){
+ if(trackFailureHandled)return;trackFailureHandled=true;
+ availableMusic=availableMusic.filter(f=>f!==currentTrack);remainingMusic=remainingMusic.filter(f=>f!==currentTrack);
+ if(musicOn&&availableMusic.length){currentTrack='';playNextTrack();}else{musicOn=false;updateMusicButton();}
+}
+birthdayMusic.addEventListener('ended',()=>{lastTrack=currentTrack;currentTrack='';if(musicOn)playNextTrack();});
+birthdayMusic.addEventListener('error',()=>{if(musicOn)handleTrackFailure();});
+function startMusic(fromUser=false){
+ if(!availableMusic.length)return;
+ musicOn=true;if(fromUser)musicStarted=true;updateMusicButton();
+ if(currentTrack&&birthdayMusic.src){const attempt=birthdayMusic.play();if(attempt&&typeof attempt.catch==='function')attempt.catch(()=>{if(musicStarted)handleTrackFailure();else{musicOn=false;updateMusicButton();}});}
+ else playNextTrack();
+}
+function toggleMusic(){if(musicOn){birthdayMusic.pause();musicOn=false;updateMusicButton();toast('Music paused');}else{startMusic(true);}}
+musicButton.addEventListener('click',toggleMusic);
+function tryAutoMusic(){
+ if(!availableMusic.length)return;
+ musicOn=true;updateMusicButton();playNextTrack();
+}
+// Attempt autoplay. If the browser blocks sound, the first normal tap anywhere starts it.
+document.addEventListener('pointerdown',function firstInteraction(e){
+ if(musicStarted)return;
+ if(e.target&&e.target.closest&&e.target.closest('#musicToggle'))return;
+ musicStarted=true;startMusic(true);
+});
+findAvailableMusic();
+
+/* Photos load automatically from the same folder: Zara.png, memory1.png–memory5.png, memory6.jpg, memory7.png, and memory8.png */
 /* Wish cards reveal a random-accessible wish */
 $$('[data-wish]').forEach(card=>card.addEventListener('click',()=>{toast(card.dataset.wish);card.style.borderColor='#f8d89a88';setTimeout(()=>card.style.borderColor='',1200);}));
 /* Birthday quiz */
@@ -256,7 +301,7 @@ $('#quizNext').addEventListener('click',()=>{if(!answered)return;if(qi<quiz.leng
 function updateCountdown(){const value=$('#birthdayDate').value;if(!value)return;let target=new Date(value+'T00:00:00');const now=new Date();if(target<now){target=new Date((+target)+365.2425*86400000);}let diff=Math.max(0,target-now);const d=Math.floor(diff/86400000);diff%=86400000;const h=Math.floor(diff/3600000);diff%=3600000;const m=Math.floor(diff/60000);const s=Math.floor((diff%60000)/1000);$('#days').textContent=String(d).padStart(2,'0');$('#hours').textContent=String(h).padStart(2,'0');$('#minutes').textContent=String(m).padStart(2,'0');$('#seconds').textContent=String(s).padStart(2,'0');}
 $('#birthdayDate').addEventListener('change',updateCountdown);updateCountdown();setInterval(updateCountdown,1000);
 /* Surprise */
-$('#openSurprise').addEventListener('click',()=>{$('#surpriseMessage').classList.add('show');$('#openSurprise').classList.add('hidden');});
+$('#openSurprise').addEventListener('click',()=>{$('#surpriseMessage').classList.add('show');$('#openSurprise').classList.add('hidden');confetti(110);toast('A little birthday magic, unlocked ✨');});
 /* Scroll reveal when the home page is active */
 function revealCheck(){$$('.reveal').forEach(el=>{if(el.getBoundingClientRect().top<innerHeight*.92)el.classList.add('visible');});}
 addEventListener('scroll',revealCheck,{passive:true});setTimeout(revealCheck,300);
